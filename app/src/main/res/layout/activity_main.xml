@@ -62,9 +62,9 @@
                     android:textSize="16sp" />
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/baseline_arrow_right" />
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/next" />
             </LinearLayout>
 
             <LinearLayout
@@ -95,7 +95,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/baseline_arrow_right" />
+                    android:src="@drawable/next" />
             </LinearLayout>
 
             <LinearLayout
@@ -111,7 +111,7 @@
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/humor" />
+                    android:src="@drawable/humour" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -126,7 +126,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/baseline_arrow_right" />
+                    android:src="@drawable/next" />
             </LinearLayout>
 
             <LinearLayout
@@ -157,7 +157,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/baseline_arrow_right" />
+                    android:src="@drawable/next" />
             </LinearLayout>
 
             <LinearLayout
@@ -188,7 +188,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/baseline_arrow_right" />
+                    android:src="@drawable/next" />
             </LinearLayout>
 
             <LinearLayout
@@ -219,7 +219,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/baseline_arrow_right" />
+                    android:src="@drawable/next" />
             </LinearLayout>
 
             <LinearLayout
@@ -250,7 +250,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/baseline_arrow_right" />
+                    android:src="@drawable/next" />
             </LinearLayout>
 
 
