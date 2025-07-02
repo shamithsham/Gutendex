@@ -12,14 +12,15 @@
         android:layout_width="100dp"
         android:layout_height="150dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_1" />
+        android:src="@drawable/no_data_available" />
 
     <TextView
         android:id="@+id/book_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Book Title"
-        android:textSize="14sp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="12sp"
         android:maxLines="2"
         android:ellipsize="end"
         android:gravity="center"
@@ -30,8 +31,9 @@
         android:id="@+id/book_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
         android:text="Author"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:textColor="#757575"
         android:gravity="center" />
 </LinearLayout>

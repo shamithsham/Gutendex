@@ -8,83 +8,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout Fiction,Drama,Humor,Politics,Philosophy,History,Adventure;
+    String[] categories = {"fiction", "drama", "humor", "politics", "philosophy", "history", "adventure"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Fiction=findViewById(R.id.fiction);
-        Drama=findViewById(R.id.drama);
-        Humor=findViewById(R.id.humor);
-        Politics=findViewById(R.id.politics);
-        Philosophy=findViewById(R.id.philosophy);
-        History=findViewById(R.id.history);
-        Adventure=findViewById(R.id.adventure);
+        for (String category : categories) {
+            int resId = getResources().getIdentifier(category, "id", getPackageName());
+            LinearLayout layout = findViewById(resId);
+            setupCategoryClick(layout, category);
+        }
+    }
 
-        Fiction.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FictionActivity.class);
-                intent.putExtra("category", "fiction");
-                startActivity(intent);
-            }
+    private void setupCategoryClick(LinearLayout layout, final String category) {
+        layout.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, FictionActivity.class);
+            intent.putExtra("category", category);
+            startActivity(intent);
         });
-
-        Drama.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FictionActivity.class);
-                intent.putExtra("category", "drama");
-                startActivity(intent);
-            }
-        });
-
-        Humor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FictionActivity.class);
-                intent.putExtra("category", "humor");
-                startActivity(intent);
-            }
-        });
-        Politics.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FictionActivity.class);
-                intent.putExtra("category", "politics");
-                startActivity(intent);
-            }
-        });
-
-        Philosophy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FictionActivity.class);
-                intent.putExtra("category", "philosophy");
-                startActivity(intent);
-            }
-        });
-
-        History.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FictionActivity.class);
-                intent.putExtra("category", "history");
-                startActivity(intent);
-            }
-        });
-
-        Adventure.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FictionActivity.class);
-                intent.putExtra("category", "adventure");
-                startActivity(intent);
-            }
-        });
-
-
     }
 }
